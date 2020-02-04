@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:clickable="false"
+                                                   android:focusable="false"
+                                                   android:background="@color/md_white_1000"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+            android:id="@+id/include_app_bar"
+            layout="@layout/app_bar_main"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/gradient_line"
+            app:layout_constraintTop_toBottomOf="@id/include_app_bar"
+    />
+
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95"
+    />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+    <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/movieTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
+            app:layout_constraintTop_toBottomOf="@+id/include_app_bar"
+            android:text="Let’s say you have more than one view to do a shared element transition in your app , how do you do it in Kotlin ?"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="@color/md_black_1000"
+            android:transitionName="title_transition_name"
+            app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end"
+    />
+
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:id="@+id/movieImage"
+            app:layout_constraintTop_toBottomOf="@+id/movieTitle"
+            android:layout_marginTop="15dp"
+            android:fitsSystemWindows="false"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:scaleType="fitXY"
+            android:clickable="false"
+            android:focusable="false"
+            android:transitionName="image_transition_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="VectorDrawableCompat"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/movieImage"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+            android:text="Kotlin"
+            android:textColor="@color/md_deep_orange_800"
+            android:clickable="false"
+            android:focusable="false"
+            android:textSize="15sp"
+            android:id="@+id/movieType"
+            android:layout_marginTop="15dp"
+    />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/movieImage"
+            app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end"
+            android:text="Save"
+            android:textColor="@color/md_black_1000"
+            android:textSize="15sp"
+            android:id="@+id/txtSave"
+            android:layout_marginTop="15dp"
+    />
+
+    <ImageButton
+            android:id="@+id/addToList"
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            app:layout_constraintEnd_toStartOf="@id/txtSave"
+            app:layout_constraintTop_toBottomOf="@+id/movieImage"
+            android:layout_marginRight="5dp"
+            app:srcCompat="@drawable/ic_turned_in_not_black_24dp"
+            tools:ignore="VectorDrawableCompat"/>
+
+    <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="addToList"
+    />
+
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+            app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/barrier"
+            android:textSize="12sp"
+            android:clickable="false"
+            android:focusable="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="During the presentation of the model we defined that a Team had a Coach but also Player. There are several possibilities for us to implement this relationship, such as adding a List of Player in the Team class (which we will see with the Converter), or adding a foreign key referring to the identifier of a Team in Player. I will introduce a third solution, with the creation of an additional class, which will only require the addition of a variable ‘teamId’ in Player (var teamId: Long). So, we create a class named here TeamAllPlayers which will contain, via the @Embedded annotation, a Team and a list of Player."
+    />
+
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

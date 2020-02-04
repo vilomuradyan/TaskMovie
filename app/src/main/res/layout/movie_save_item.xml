@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/list_item"
+                                                   android:layout_width="140dp"
+                                                   android:layout_marginRight="10dp"
+                                                   android:background="@color/md_white_1000"
+                                                   android:layout_height="140dp">
+
+
+    <ImageView
+            android:id="@+id/Image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/round_outline"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:transitionName="image_transition_name"
+            app:srcCompat="@drawable/ic_launcher_background"
+            android:layout_marginBottom="8dp"
+            tools:ignore="VectorDrawableCompat" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75"
+    />
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/translucent_white"
+            app:layout_constraintTop_toBottomOf="@id/guideline_vertical_end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <TextView
+            android:layout_width="0dp"
+            android:id="@+id/pillarName"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline_vertical_end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/guideline_vertical_end"
+            android:textSize="20sp"
+            android:text="Title"
+            android:textStyle="bold"
+            android:transitionName="pillar_transition_name"
+    />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

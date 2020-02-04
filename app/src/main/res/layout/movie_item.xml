@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/list_item"
+                                                   android:layout_width="match_parent"
+                                                   android:background="@color/md_white_1000"
+                                                   android:layout_height="140dp">
+    <ImageView
+            android:id="@+id/movieImage"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="@drawable/round_outline"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:transitionName="image_transition_name"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="VectorDrawableCompat" />
+
+
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@drawable/gradient_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <TextView
+            android:ellipsize="end"
+            android:maxLines="5"
+            app:layout_constraintBottom_toBottomOf="@id/movieImage"
+            android:layout_width="0dp"
+            android:id="@+id/movieTitle"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/movieImage"
+            app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end"
+            android:text="If ImageView layout height  width are not same then you'll get a rectangular view as shown in pic above. This technique won't give perfectly rounded corners for rectangular view"
+            app:layout_constraintTop_toTopOf="@id/movieImage"
+            android:textSize="15sp"
+            android:transitionName="title_transition_name"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginLeft="10dp"
+    />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

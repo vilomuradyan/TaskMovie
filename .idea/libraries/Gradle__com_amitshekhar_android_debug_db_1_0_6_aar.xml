@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amitshekhar.android:debug-db:1.0.6@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/300ccb62bbf5f1b92f0072c99b7e7d64/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/300ccb62bbf5f1b92f0072c99b7e7d64/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db/1.0.6/6c95606c9456e54d13017b108175d5381fedaea6/debug-db-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
